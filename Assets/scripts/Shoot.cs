@@ -5,6 +5,17 @@ using UnityEngine;
 public class Shoot : MonoBehaviour {
 
 	public GameObject bullet;
+	public AudioClip shootSound;
+
+	private AudioSource source;
+	private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
+
+    void Awake () {
+		source = GetComponent<AudioSource>();
+
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +26,8 @@ public class Shoot : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown("space"))
 		{
+			float vol = Random.Range( volLowRange, volHighRange);
+			source.PlayOneShot(shootSound,vol);
 			Instantiate(bullet,transform.position, transform.rotation);
 		}
 		
