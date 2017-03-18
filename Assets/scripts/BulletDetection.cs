@@ -21,5 +21,10 @@ public class BulletDetection : MonoBehaviour {
 			Destroy(coll.gameObject);
 			Destroy(this.gameObject);
 		}
+
+		if (coll.gameObject.tag == "border")
+		{
+			Destroy(this.gameObject);
+		}
 	}
 }
