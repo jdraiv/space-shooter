@@ -14,7 +14,6 @@ public class Shoot : MonoBehaviour {
 
     void Awake () {
 		source = GetComponent<AudioSource>();
-
 	}
 
 	// Use this for initialization
@@ -26,9 +25,14 @@ public class Shoot : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown("space"))
 		{
+			Vector3 position = transform.position;
+			position.x += 2;
+			//Sound effects
 			float vol = Random.Range( volLowRange, volHighRange);
 			source.PlayOneShot(shootSound,vol);
 			Instantiate(bullet,transform.position, transform.rotation);
+			Instantiate(bullet,position, transform.rotation);
+
 		}
 		
 	}

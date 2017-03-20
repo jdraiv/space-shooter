@@ -6,6 +6,7 @@ TagManager:
   tags:
   - bullet
   - asteroid
+  - border
   layers:
   - Default
   - TransparentFX
