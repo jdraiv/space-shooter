@@ -22,7 +22,7 @@ public class DestroySpaceship : MonoBehaviour {
 		{
 			Destroy(coll.gameObject);
 			Destroy(this.gameObject);
-			SceneManager.LoadScene(1);
+			SceneManager.LoadScene(0);
 		}
 
 	}
