@@ -26,11 +26,10 @@ public class Shoot : MonoBehaviour {
 		if(Input.GetKeyDown("space"))
 		{
 			Vector3 position = transform.position;
-			position.x += 2;
+			position.x += 1;
 			//Sound effects
 			float vol = Random.Range( volLowRange, volHighRange);
 			source.PlayOneShot(shootSound,vol);
-			Instantiate(bullet,transform.position, transform.rotation);
 			Instantiate(bullet,position, transform.rotation);
 
 		}

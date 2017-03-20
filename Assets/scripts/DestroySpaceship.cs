@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class DestroySpaceship : MonoBehaviour {
@@ -7,12 +8,12 @@ public class DestroySpaceship : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
@@ -21,7 +22,7 @@ public class DestroySpaceship : MonoBehaviour {
 		{
 			Destroy(coll.gameObject);
 			Destroy(this.gameObject);
-			Debug.Log("Game over");
+			SceneManager.LoadScene(1);
 		}
 
 	}

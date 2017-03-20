@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyBullet : MonoBehaviour {
+public class DestroyObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
